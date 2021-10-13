@@ -1,0 +1,20 @@
+* *{
+    box-sizing: border-box;
+    display: block;
+    padding-top: 5px;
+    padding-left: 95px;
+  }
+
+.boton button {
+    padding-left: 20px;
+    padding-right: 17px;
+    margin-top: -100px;
+    margin-right: center;
+    margin-left: 1500px;
+    border-radius: 2.5rem;
+    background-color: #0769fc;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 13px 13px 20px 0px #0769fc, -13px -13px 20px #0769fc;
+    color: rgb(255, 255, 255);
+}

@@ -1,7 +1,11 @@
 <div
 style="width: 100vw; 
 height: 100vh; 
-background-image: url(assets/Ayaka.gif); 
+margin-block-start: -8.5px;
+margin-block-end: -1000px;
+margin-inline-start: -8px;
+margin-inline-end: -600px;
+background-image: url(assets/klee.gif); 
 background-repeat: no-repeat; 
 background-size: cover; 
 align-items: center; 
@@ -24,7 +28,7 @@ justify-content: center;" >
         placeholder="Password"
         required="required"
       />
-      <button type="submit" (click)="login()">Ingresar</button>
+      <button routerLink="/principal" routerLinkActive="active" type="submit">Ingresar</button>
     </form>
   </div>
 </div>

@@ -7,11 +7,7 @@ import { Component } from '@angular/core';
 })
 export class PrincipalComponent  {
 
-  usuario: string;
-  foto: string;
-  publicaciones: string;
-  noticias: string;
-  builds: string;
+   post : string;
 
 
   constructor() { }
