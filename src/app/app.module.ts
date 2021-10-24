@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { RegisterComponent } from './register/register.component';
+import { AngularFirestoreModule  } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +24,10 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    EditorModule  
+    EditorModule,
+    AngularFirestoreModule,
+    AngularFireAnalyticsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)  
   ],
   providers: [],
   bootstrap: [AppComponent]

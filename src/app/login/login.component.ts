@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -7,10 +9,10 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent  {
 
-  email: string;
-  password: string;
+  email: Observable<any[]>;
+  password: Observable<any[]>;
 
-  constructor() {}
-  login() {
+  constructor(firestore: AngularFirestore) {
+     firestore.collection('email').add({email : "asd"});
   }
 }
