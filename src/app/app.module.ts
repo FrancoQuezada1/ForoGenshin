@@ -13,6 +13,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { environment } from 'src/environments/environment';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { environment } from 'src/environments/environment';
     EditorModule,
     AngularFirestoreModule,
     AngularFireAnalyticsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)  
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

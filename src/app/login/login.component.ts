@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { AutoService } from '../auto.service';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +8,28 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent  {
 
-  email: Observable<any[]>;
-  password: Observable<any[]>;
-
-  constructor(firestore: AngularFirestore) {
-     firestore.collection('email').add({email : "asd"});
-  }
-}
+  constructor(
+    private AutoService: AutoService
+    ){
+    }
+    
+    email: string;
+    password: string;
+    
+    signUp() {
+    this.AutoService.SignUp(this.email, this.password);
+    this.email = '';
+    this.password = '';
+    }
+    
+    signIn() {
+    this.AutoService.SignIn(this.email, this.password);
+    this.email = '';
+    this.password = '';
+    }
+    
+    signOut() {
+    this.AutoService.SignOut();
+    }
+    
+    }
